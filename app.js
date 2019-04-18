@@ -22,9 +22,24 @@ sequelize.sync().then(result => {
 
 //naredi tabele za vse modele v js datotekah
 
+
+
 app.get('/', (req, res) => {
-	res.render('../view/index.pug');
-});
+
+
+
+	shrani.findAll().then(result => {
+		console.log(result.length)
+		
+		//nasleden del MORA!!! biti v then(), ker drugače izvajanje prehiti pridobitev vrednosti (asinhronost) in je neuspešno
+		res.render('../view/index.pug', {numberofelements: result.length, elementtitle: result})
+
+		});
+	})
+
+	// findByPk nam poišče in vrne le en "primary key" - le en element
+
+
 
 app.post('/', (req, res) => {
 	shrani.create({

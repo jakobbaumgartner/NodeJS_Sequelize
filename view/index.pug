@@ -7,6 +7,20 @@ html(lang="en")
 		title ProtoSequelize0
 	body
 		h1 Simple example:
+
 		form(action="/" method="post")
 			input(type="text" name="something" value="valueofsomething")
 			input(type="submit", value="Submit")
+
+p
+	b
+		| Number of elements:
+	| 	#{numberofelements}
+
+	h2 List:
+
+
+ul 
+	- for (var x = 0; x < numberofelements; x++ ) 
+		li 	#{elementtitle[x].title}
+			
