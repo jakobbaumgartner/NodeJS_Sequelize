@@ -9,8 +9,7 @@ const Product = sequelize.define('notes', {
 		allowNull: false, 
 		primaryKey: true
 	},
-	title: Sequelize.STRING,
-	content: Sequelize.STRING
+	title: Sequelize.STRING
 })
 
 module.exports = Product
