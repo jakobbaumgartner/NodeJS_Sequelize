@@ -22,5 +22,14 @@ p
 
 ul 
 	- for (var x = 0; x < numberofelements; x++ ) 
-		li 	#{elementtitle[x].title}
+		li
+			form(action="/delete/"  method='post')
+					
+				//- input(type="hidden" name="id0" value=elementtitle[x].title)
+				input(type="submit" name="id0" value=elementtitle[x].title) 
+			
+
+
+
+		
 			

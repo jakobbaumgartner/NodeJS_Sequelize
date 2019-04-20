@@ -22,7 +22,19 @@ sequelize.sync().then(result => {
 
 //naredi tabele za vse modele v js datotekah
 
+app.use('/delete/', (req, res) => {
+	console.log(req.body.id0)
 
+	shrani.findAll({where: {
+		title: req.body.id0
+	} })
+	.then(result => {
+		result[0].destroy()
+	})
+	.then(result => {
+		 res.redirect('/');
+	})
+});
 
 app.get('/', (req, res) => {
 
@@ -45,7 +57,10 @@ app.post('/', (req, res) => {
 	shrani.create({
 		title: req.body.something
 	})
-	.then(result => {console.log(result)})
+	.then(result => {
+		console.log(result)
+		 res.redirect('/');
+	})
 	.catch(err => {
 		console.log(err)
 	})

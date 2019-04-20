@@ -1,3 +1,4 @@
 #Sequelize
 -> Omogoča nam uporabo metod in objektov, namesto pisanja SQL kode. 
 -> Sequelize v ozadju uporabi SQL kodo.
+
