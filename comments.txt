@@ -2,3 +2,4 @@
 -> Omogoča nam uporabo metod in objektov, namesto pisanja SQL kode. 
 -> Sequelize v ozadju uporabi SQL kodo.
 
+Obstajajo še različne one-to-one in onetomany in mnoge druge metode ... docs.
